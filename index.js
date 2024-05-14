@@ -15,4 +15,5 @@ client.once('ready', () => {
     }, 1000);
 });
 
-client.login('process.env.TOKEN');
+client.login(process.env.TOKEN);
+
