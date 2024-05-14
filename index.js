@@ -15,5 +15,11 @@ client.once('ready', () => {
     }, 1000);
 });
 
+client.on('messageCreate', message => {
+    if (message.content === '+test' && message.member.permissions.has('ADMINISTRATOR')) {
+        message.reply('salut');
+    }
+});
+
 client.login(process.env.TOKEN);
 
